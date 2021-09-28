@@ -1,0 +1,21 @@
+.boton {
+    text-decoration:none;
+
+    font-weight:600;
+    font-size:20px;
+    color:#B19D9D;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    margin-left: auto;
+    background-color:transparent;
+    outline-color: transparent !important;
+    outline-style: none !important;
+    
+    }
+    .fondo{
+        background-color: #111111;
+        align-content: center;
+    }
+   
