@@ -13,12 +13,14 @@
     <div class="login_caja">
         <img class= "logo_bienvenida" src="img/bienvenida.png">    
 
-        <h1 class="parrafo"> Inicia sesion con </h1>
+        <h1 class="parrafo"> Inicia sesión con </h1>
        
-          <a href="#" class="boton2"> Google </a>
+        <a href="#" class="boton2"> Google </a>
+        
     </div>
-   
-    
+    <img class ="img_izquierda" src="img/izquierda.png">
+    <img class ="img_derecha" src="img/derecha.png">
+ 
            
 </body>
 </html>
