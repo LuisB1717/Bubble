@@ -7,11 +7,14 @@
     
 </head>
 <body >
-    <div align="center"><img  src="bubble.png" ></div>
-    <div align="center">
-        <a class="boton" href="" >Cliente</a>
-        <a class="boton" href="" >Negocio</a>
+    <div class="login_caja">
+    <img class="logo_bienvenida" src="img/bienvenida.png" >
+    <a class="boton2" href="" >Cliente</a>
+        <a class="boton2" href="" >Negocio</a>
     </div>
+
+    <img class ="img_izquierda" src="img/izquierda.png">
+   
      
 
     

@@ -56,6 +56,11 @@ margin-top: 128px;
     text-decoration: none;
     display: block;
 }
+.boton2:hover{
+    background: rgb(31, 30, 30);
+    cursor: pointer;
+    color: white;
+}
 
  .img_izquierda{
     width: 132px;
