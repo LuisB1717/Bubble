@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="principal.css">
     
 </head>
-<body class="fondo">
+<body >
     <div align="center"><img  src="bubble.png" ></div>
     <div align="center">
         <a class="boton" href="" >Cliente</a>
