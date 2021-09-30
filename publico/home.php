@@ -7,11 +7,26 @@
     
 </head>
 <body >
-    <div class="login_caja">
-    <img class="logo_bienvenida" src="img/bienvenida.png" >
-    <a class="boton2" href="" >Cliente</a>
-        <a class="boton2" href="" >Negocio</a>
-    </div>
+    
+        
+        <div id="loginbox">
+           
+                <img class= "logo" src="img/burbuja_oscura.png" >
+            
+            <div class="boxselect">
+                    <div class id="select">
+                        <img src="img/client.png" width="100" height="100" >
+                        <a class="boton" href="" >Cliente</a>
+                    </div>
+                    <div class id="select">
+                        <img src="img/tienda.png" width="100" height="100" >
+                        <a class="boton" href="" >Negocio</a>
+                    </div> 
+                    </div>
+            </div>
+            
+        </div>
+    
 
     <img class ="img_izquierda" src="img/izquierda.png">
    
