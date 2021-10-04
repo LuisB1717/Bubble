@@ -95,11 +95,12 @@ margin-top: 128px;
     color:#A271F2;
     text-decoration: none;
     display: block;
+    background:transparent;
 }
 .boton2:hover{
-    background: rgb(31, 30, 30);
+    background: #A271F2;
     cursor: pointer;
-    color: white;
+    color: #111;
 }
 
  .img_izquierda{
