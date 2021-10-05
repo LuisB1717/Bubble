@@ -9,6 +9,7 @@
 	$solicitud="INSERT INTO cliente(nombre,correoC,imgC)VALUES('$nombre','$correo','$telefono')";
 
 	$resultado=mysqli_query($conexion,$solicitud);
+	
 	header("location:../../vistas/Formulario.php");
 	
 ?>

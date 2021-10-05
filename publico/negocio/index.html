@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú lateral responsive - MagtimusPro</title>
+
+    <link rel="stylesheet" href="negocio.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+	<link rel="stylesheet" href="popup.css">
+
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+<body id="body">
+    
+    <header>
+        <div class="icon__menu">
+            <i class="fas fa-bars" id="btn_open"></i>
+        </div>
+       
+        <div class="buscar_negocio"> 
+            <input type="text" name="buscar" placeholder="" autocomplete="off">
+            <div class="btn_buscar">
+                   <i class="fas fa-search icon"></i>
+            </div>
+        </div>
+        <div class="login_trabajador">
+            <i class="fas fa-key"></i>
+             <a href="#" >Iniciar Sesión</a>
+        </div>
+    </header>
+
+    <div class="menu__side" id="menu_side">
+       
+        <div class="name__page">
+            <i class="fab fa-youtube"></i>
+            <h4>DATOS DE LA EMPRESA</h4>
+        </div>
+
+        <div class="options__menu">	
+            <a href="#">
+                <div class="option">
+                   
+                    <i class="far fa-address-card" id="btn-abrir-popup-trabajador" title="Nosotros"></i>
+                    <h4>Trabajadores</h4>
+                    
+                    
+                </div>
+            </a>
+            <a href="#">
+                <div class="option">
+                    <i class="fas fa-dolly-flatbed" id="btn-abrir-popup-p"></i>
+                    <h4>Agregar Producto</h4>
+                    
+                    
+                </div>
+            </a>
+            
+        </div>
+        
+            <button class="logout">
+                <div class="option_2">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <h4 class="parrafo_cerrar">Cerrar Sesión</h4>
+
+                </div>
+
+            </button>
+        
+        
+        <div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <img class="logo" src="../img/burbuja_oscura.png" width="50" height="50">
+				<form  method="POST" action="../../api/entidades/empleado/insertarempleado.php">
+					<div class="contenedor-inputs">
+						<input type="text" placeholder="Nombres y Apellidos" name="nombre">
+						
+                        <input type="password" placeholder="Contraseña" name="contrasena">
+					</div>
+					<input type="submit" class="btn-submit" name="registrarempleado" value="Guardar">
+				</form>
+			</div>
+		</div>
+            
+    </div>
+    
+    <div class="overlay" id="overlay">
+        <div class="popup" id="popup">
+            <a href="#" id="btn-cerrar-popup-p" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+            <img class="logo" src="../img/burbuja_oscura.png" width="50" height="50">
+            <form action="">
+                <div class="contenedor-inputs">
+                    <input type="text" placeholder="Nombre">
+                    <input type="text" placeholder="Descripcion">
+                    <input name="subirimg" type="file" >
+                </div>
+                <input type="submit" class="btn-submit"name="btnregistrarproducto" value="Guardar">
+            </form>
+        </div>
+    </div>
+        
+</div>
+  
+    <main>
+       
+        <div class="child-page-listing">
+
+            <h2>PRODUCTOS</h2>
+          
+            <div class="grid-container">
+          
+              <article id="3685" class="location-listing">
+          
+                <a class="location-title" href="#">
+                    Botella medio litro           </a>
+          
+                <div class="location-image">
+                  <a href="#">
+                      <img width="300" height="169" src="https://www.aguaunica.com.pe/wp-content/uploads/2018/09/Sin-t%C3%ADtulo-2.png" alt="san francisco">    </a>
+          
+                </div>
+          
+          
+            </div>
+            <!-- end grid container -->
+          
+          </div>
+        
+    </main>
+
+  
+
+    <script src="scriptnegocio.js"></script>
+    <script src="popuptrabajador.js"></script>
+   <script src="popupproducto.js"></script>
+    
+</body>
+</html>
