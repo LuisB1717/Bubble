@@ -13,12 +13,14 @@ async function iniciarSesion(){
   try {
     const autenticacionFirebase = await firebase.auth.iniciarSesionGoogle()
     console.log('Inicio sesión', autenticacionFirebase);
+    const perfil2 = autenticacionFirebase.user
     const perfil = autenticacionFirebase.additionalUserInfo.profile
+    
     const formData = new FormData()
+    formData.append('id_google',perfil2.uid)
     formData.append('nombre',perfil.name)
     formData.append('correo',perfil.email)
     formData.append('img',perfil.picture)
-    formData.append('id', 'sdf')
     
 		const resultado = await fetch(`${config.API_URL}/entidades/cliente/insertar.php`, {
 			method: 'post',

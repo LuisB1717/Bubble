@@ -4,10 +4,9 @@
 	$nombre=$_POST['nombre'];
 	$correo=$_POST['correo'];
 	$img= $_POST['img'];
+	$id_google=$_POST['id_google'];
 	
-
-
-	$solicitud="INSERT INTO cliente(nombre,correoC,imgC)VALUES('$nombre','$correo','$img')";
+	$solicitud="INSERT INTO cliente(id_google_c,nombre,correoC,imgC)VALUES('$id_google','$nombre','$correo','$img')";
 
 	$resultado=mysqli_query($conexion,$solicitud);
 
