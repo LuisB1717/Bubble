@@ -75,14 +75,14 @@
 			<div class="popup" id="popup">
 				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
                 <img class="logo" src="../img/burbuja_oscura.png" width="50" height="50">
-				<form  method="POST" action="../../api/entidades/empleado/insertarempleado.php">
+				<form id="registar-empleado-form">
 					<div class="contenedor-inputs">
-						<input type="text" placeholder="Nombres y Apellidos" name="nombre">
+						<input id="nombre-empleado" type="text" placeholder="Nombres y Apellidos" name="nombre">
 						
-                        <input type="password" placeholder="Contraseña" name="contrasena">
+                        <input id="contrasena-empleado" type="password" placeholder="Contraseña" name="contrasena">
 					</div>
-					<input type="submit" class="btn-submit" name="registrarempleado" value="Guardar">
 				</form>
+                <button id="guardar-empleado">Guardar</button>
 			</div>
 		</div>
             
@@ -135,7 +135,7 @@
   
 
     <script src="scriptnegocio.js"></script>
-    <script src="popuptrabajador.js"></script>
+    <script type="module" src="popuptrabajador.js"></script>
    <script src="popupproducto.js"></script>
     
 </body>

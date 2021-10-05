@@ -8,6 +8,5 @@
 	$solicitud="INSERT INTO empleado(nombre,contrasena)VALUES('$nombre','$contrasena')";
 
 	$resultado=mysqli_query($conexion,$solicitud);
-	header("location:../../../publico/negocio/index.html");
 	
 ?>
