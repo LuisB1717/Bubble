@@ -51,7 +51,7 @@ header{
     transform: translate(0%, -50%);
 }
 .buscar_negocio input{
-    width: 100px;
+    width: 200px;
     height: 26px;
     outline: none;
     font-size: 14px;
@@ -61,12 +61,6 @@ header{
     text-align: center;
     transition: all .5s;
 
-}
-.buscar_negocio input:hover{
-    width: 220px;
-    background-color: #fff;
-    border-color: #A271F2 ;
-    box-shadow: 0 0 5px #EEEDED;
 }
 
 .btn_buscar{
