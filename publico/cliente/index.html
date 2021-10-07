@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="cliente.css">
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
 </head>
 <body id="body">
@@ -40,11 +41,10 @@
                     <h4>Inicio</h4>
                 </div>
             </a>
-
-            <a href="#">
+            <a>
                 <div class="option">
-                    <i class="far fa-comments" title="Chats"></i>
-                    <h4>Chats</h4>
+                    <i class="far fa-comments" title="Chats" ></i>
+                    <h4 onclick="mostrar_chats();">Chats</h4>
                 </div>
             </a>
 
@@ -59,15 +59,12 @@
         </button> 
     </div>
 
-    <main>
-        <h1>Cliente</h1><br>
-        <p>que pasa causa
-
-        </p> <br>
-
-        <p></p>
+    <main class="listado_chats" id="chat_lista">
+        
     </main>
 
     <script src="cliente.js"></script>
+    <script src="chat.js"> </script>
+    
 </body>
 </html>

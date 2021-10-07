@@ -1,4 +1,4 @@
-/* Google Fonts Import Link */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
   margin: 0;
@@ -45,6 +45,38 @@
   opacity: 0;
   pointer-events: none;
 }
+.buscar_negocio{
+  position: absolute;
+  top: 10%;
+  right: 50%;
+  transform: translate(360%, -160%);
+}
+.buscar_negocio input{
+  width: 200px;
+  height: 27px;
+  outline: none;
+  font-size: 14px;
+  border-radius: 20px;
+  color: black;
+  border: 1px solid #A271F2; 
+  text-align: center;
+  transition: all .5s;
+
+}
+
+.btn_buscar{
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 4px;
+  width: 27px;
+  height: 27px;
+  line-height: 27px;
+  text-align: center;
+  color:#A271F2;
+  border-radius: 50%;
+  cursor: pointer;
+}
 .sidebar .nav-links{
   height: 100%;
   padding: 30px 0 150px 0;
@@ -62,7 +94,7 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li:hover{
-  background: #1d1b31;
+  background: #111;
 }
 .sidebar .nav-links li .iocn-link{
   display: flex;
@@ -106,7 +138,7 @@
 .sidebar .nav-links li .sub-menu{
   padding: 6px 6px 14px 80px;
   margin-top: -10px;
-  background: #1d1b31;
+  background: #111;
   display: none;
 }
 .sidebar .nav-links li.showMenu .sub-menu{
@@ -187,7 +219,7 @@
   object-fit: cover;
   border-radius: 16px;
   margin: 0 14px 0 12px;
-  background: #1d1b31;
+  background: #111;
   transition: all 0.5s ease;
 }
 .sidebar.close .profile-details img{
@@ -227,7 +259,7 @@
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text{
-  color: #11101d;
+  color: #111;
   font-size: 35px;
 }
 .home-section .home-content .bx-menu{

@@ -244,5 +244,13 @@ a.selected{
         left: -80px;
     }
 
+  
+    .tabla_datos{
+        margin:auto;
+        width : 800px;
+        border-collapse: separate;
+        border-spacing: 10px 5px;
+    }
+
 
 }
