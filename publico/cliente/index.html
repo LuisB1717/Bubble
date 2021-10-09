@@ -1,70 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cliente</title>
-    <link rel="stylesheet" href="cliente.css">
-    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    
-</head>
-<body id="body">
-    
-    <header>
-        <div class="icon__menu">
-            <i class="fas fa-bars" id="btn_open"></i>  
-        </div>
 
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+      <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="cliente.css">
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+       </head>
+    <body>
+        
+      <div class="sidebar close">
+        <div class="logo-details">
+          <i class='bx bxs-plus-circle'></i>
+          <span class="logo_name">Bubble</span>
+      </div>
+      <header>
         <div class="buscar_negocio"> 
-            <input type="text" name="buscar" placeholder="" autocomplete="off">
-            <div class="btn_buscar">
-                   <i class="fas fa-search icon"></i>
-            </div>
-        </div>
-        <!--<img class="img_bubble" src="../img/bubble.png"> -->
-        
-    </header>
-
-    <div class="menu__side" id="menu_side">
-
-        <div class="name__page">
-            <i class="fab fa-youtube"></i>
-            <h4>Luis Barboza</h4>
-        </div>
-
-        <div class="options__menu">	
-
-            <a href="#" class="selected">
-                <div class="option">
-                    <i class="fas fa-home" title="Inicio"></i>
-                    <h4>Inicio</h4>
-                </div>
-            </a>
+          <input type="text" name="buscar" placeholder="Buscar negocios..." autocomplete="off">
+          <div class="btn_buscar">
+                 <i class="fas fa-search icon"></i>
+          </div>      
+      </div>
+      </header>
+   
+        <ul class="nav-links">
+          <li>
             <a href="#">
-                <div class="option">
-                    <i class="far fa-comments" title="Chats" onclick="mostrar_chats();"></i>
-                    <h4 onclick="mostrar_chats();">Chats</h4>
-                </div>
+              <i class='bx bx-home' ></i>
+              <span class="link_name">Inicio</span>
             </a>
-
-        </div>
-
-        <button class="btn_cerrar_sesion">
-            <div class="option_2">
-                <i class="fas fa-sign-out-alt"></i>
-                <h4 class="parrafo_cerrar">Cerrar sesión</h4>
+          </li>
+          <li>
+            <div class="iocn-link">
+              <a href="#">
+                <i class='bx bx-chat' onclick="mostrar_chats();"></i>
+                <span class="link_name"onclick="mostrar_chats();">Chats</span>
+              </a>
             </div>
-           
-        </button> 
-    </div>
-
-    <main class="listado_chats" id="chat_lista">
-        
-    </main>
-
-    <script src="cliente.js"></script>
-    <script src="chat.js"> </script>
-    
-</body>
-</html>
+         </li>
+          <li>
+        <div class="profile-details">
+          <div class="profile-content">
+            <img src="../img/perfil.jpg" alt="profileImg">
+          </div>
+          <div class="name-job">
+            <div class="profile_name">Luis Barboza</div>
+            <div class="job">Cliente</div>
+          </div>
+          <i class='bx bx-log-out' ></i>
+        </div>
+      </li>
+    </ul>
+ </div>
+      <section class="home-section">
+        <div class="home-content">
+          <i class='bx bx-menu' ></i>
+        </div>
+        <main class="listado_chats" id="chat_lista">
+      </section>
+      <script>
+      let arrow = document.querySelectorAll(".arrow");
+      for (var i = 0; i < arrow.length; i++) {
+        arrow[i].addEventListener("click", (e)=>{
+       let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+       arrowParent.classList.toggle("showMenu");
+        });
+      }
+      let sidebar = document.querySelector(".sidebar");
+      let sidebarBtn = document.querySelector(".bx-menu");
+      console.log(sidebarBtn);
+      sidebarBtn.addEventListener("click", ()=>{
+        sidebar.classList.toggle("close");
+      });
+      </script>
+       <script src="chat.js"> </script>
+    </body>
+    </html>
