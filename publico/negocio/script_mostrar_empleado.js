@@ -5,7 +5,7 @@
             method :'POST'
           }
 
-          fetch('../../api/dependencias/db/conexión.php',opciones)
+          fetch('../../api/entidades/empleado/listar.php',opciones)
             .then(respuesta => respuesta.json())
             .then(resultado =>{
 
