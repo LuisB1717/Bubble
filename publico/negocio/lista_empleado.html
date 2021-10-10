@@ -1,0 +1,43 @@
+<html>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="negocio2.css">
+       
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="popup.css">
+    
+        <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>  
+    </head>
+    <body>
+        <button id="btn-abrir-popup-trabajador"> agregrar Trbajador</button>
+        <table class="tabla_datos">
+            <thead>
+                <th>Nombre</th>
+                <td>Foto</td>
+                <td>Apellidos</td>
+                <td>Curso</td>
+            </thead>
+        </table>
+        <div class="overlay" id="overlay">
+			<div class="popup" id="popup">
+				<a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+                <img class="logo" src="../img/burbuja_oscura.png" width="50" height="50">
+				<form id="registar-empleado-form">
+					<div class="contenedor-inputs">
+						<input id="nombre-empleado" type="text" placeholder="Nombres y Apellidos" name="nombre">
+						
+                        <input id="contrasena-empleado" type="password" placeholder="Contraseña" name="contrasena">
+					</div>
+				</form>
+                <button id="guardar-empleado">Guardar</button>
+			</div>
+		</div>
+        <script type="module" src="popuptrabajador.js"></script>
+    </body>
+
+</html>
