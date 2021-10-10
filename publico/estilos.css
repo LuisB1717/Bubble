@@ -21,13 +21,20 @@
 }
 
 body {
-	background: linear-gradient(120deg, #A271F2 , #EEEDED);
+	background: #EEEDED;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	height: 100vh;
-	margin: -20px 0 20px;
+	margin: 0;
+}
+.img_cliente{
+
+	margin: 17px;
+	
+}
+.img_negocio{
+	margin:17px;
 }
 
 .img{
@@ -87,6 +94,9 @@ form {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
+	display: flex;
+	justify-content: center;
+	inset-block: 100px;
 }
 
 .form-container {

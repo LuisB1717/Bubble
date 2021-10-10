@@ -2,7 +2,8 @@
 function mostrar_chats(){
     
     $.ajax({
-        url:'lista_chats.html',
+        url:'../../api/entidades/cliente/listar.php',
+        dataType:'text',
         beforesed:function(){
             $('#chat_lista').html("Cargando...");
         },

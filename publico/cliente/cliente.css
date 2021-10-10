@@ -45,13 +45,14 @@
   opacity: 0;
   pointer-events: none;
 }
-.buscar_negocio{
+.home-section .buscar_negocio{
   position: absolute;
-  top: 10%;
-  right: 50%;
-  transform: translate(360%, -160%);
+  top: 20px;
+  right:50%;  
+  float:right;
+  justify-content: center;  
 }
-.buscar_negocio input{
+.home-section .buscar_negocio input{
   width: 200px;
   height: 27px;
   outline: none;
@@ -60,8 +61,6 @@
   color: black;
   border: 1px solid #A271F2; 
   text-align: center;
-  transition: all .5s;
-
 }
 
 .btn_buscar{
