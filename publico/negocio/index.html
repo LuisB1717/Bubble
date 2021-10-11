@@ -1,82 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-    <!DOCTYPE html>
-    <html lang="en" dir="ltr">
-      <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="negocio.css">
-        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-       </head>
-    <body>
-        
-      <div class="sidebar close">
-        <div class="logo-details">
-          <i class='bx bxs-plus-circle'></i>
-          <span class="logo_name">Bubble</span>
-      </div>
-      
-        <div class="buscar_negocio"> 
-          <input type="text" name="buscar" placeholder="Buscar Produto..." autocomplete="off">
-          <div class="btn_buscar">
-                 <i class="fas fa-search icon"></i>
-          </div>   
-      </div>    
-        <ul class="nav-links">
-          <li>
-            <a href="#"  onclick="mostrar_producto();">
-              <i class='bx bx-home' ></i>
-              <span class="link_name">Producto</span>
-            </a>
-          </li>
-          <li>
-            <div class="iocn-link">
-              <a href="#"  onclick="mostrar_empleado();">
-                <i class='bx bx-user' ></i>
-                <span class="link_name">Trabajadores</span>
-              </a>
-            </div>
-         </li>
-          <li>
-        <div class="profile-details">
-          <div class="profile-content">
-            <img src="../img/negocio.jpg" alt="profileImg">
-          </div>
-          <div class="name-job">
-            <div class="profile_name">Agua Unica</div>
-            <div class="job">Negocio</div>
-          </div>
-          <i class='bx bx-log-out' ></i>
-        </div>
-      </li>
-    </ul>
- </div>
-      <section class="home-section">
-        <button type="submit" value="Hola" class="btnlogin">Iniciar sesion</button>
-        <div class="home-content">
-          <i class='bx bx-menu' ></i>
-        </div>
-        
-        <main class="listado_chats" id="empleado_lista">
-      </section>
-      <script>
-      let arrow = document.querySelectorAll(".arrow");
-      for (var i = 0; i < arrow.length; i++) {
-        arrow[i].addEventListener("click", (e)=>{
-       let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-       arrowParent.classList.toggle("showMenu");
-        });
-      }
-      let sidebar = document.querySelector(".sidebar");
-      let sidebarBtn = document.querySelector(".bx-menu");
-      console.log(sidebarBtn);
-      sidebarBtn.addEventListener("click", ()=>{
-        sidebar.classList.toggle("close");
-      });
-      </script>
-       <script src="empleado.js"> </script>
-       <script src="producto.js"> </script>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="negocio.css">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
 
-    </body>
-    </html>
+<body>
+
+  <div id="menu">
+  </div>
+ 
+  <div class="buscar_negocio">
+    <input type="text" name="buscar" placeholder="Buscar Produto..." autocomplete="off">
+    <div class="btn_buscar">
+      <i class="fas fa-search icon"></i>
+    </div>
+  </div>
+
+  <script src="menu.js"> </script>
+  <script src="producto.js"> </script>
+
+</body>
+
+</html>

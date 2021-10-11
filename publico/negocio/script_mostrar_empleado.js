@@ -1,23 +1,21 @@
 
 
-          const tabla = document.querySelector('#cuerpo');
-          const opciones = {
-            method :'POST'
-          }
 
-          fetch('../../api/entidades/empleado/listar.php',opciones)
-            .then(respuesta => respuesta.json())
-            .then(resultado =>{
+async function cargarEmpleado() {
 
-                resultado.forEach(elemento => {
-                  
-                  tabla.innerHTML +=  `
-                            <tr>
-                              
-                              <td>${elemento.nombre}</td>
-                              
-                            </tr>
-                  `
-                });
-            });
+  const tabla = document.querySelector('#cuerpo')
 
+  const respuesta = await fetch('../../api/entidades/empleado/listar.php', {
+    method: 'POST'
+  })
+  const trabajadores = await respuesta.json()
+  trabajadores.forEach(trabajador => {
+
+    tabla.innerHTML += `
+              <tr>
+                <td>${trabajador.nombre}</td> 
+              </tr> `
+  });
+
+}
+cargarEmpleado()
