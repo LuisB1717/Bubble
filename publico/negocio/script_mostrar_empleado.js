@@ -1,6 +1,4 @@
 
-
-
 async function cargarEmpleado() {
 
   const tabla = document.querySelector('#cuerpo')
