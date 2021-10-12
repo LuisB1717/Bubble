@@ -1,17 +1,13 @@
 <?php
-	include("../../dependencias/db/conexión.php");
+include("../../dependencias/db/conexión.php");
 
-	$solicitud="SELECT * FROM cliente";
-	$resultado=mysqli_query($conexion,$solicitud);
+$sql ="SELECT nombre, correoC FROM cliente";
+$resultado=mysqli_query($conexion,$sql);
+$datos = mysqli_fetch_all($resultado,MYSQLI_ASSOC);
 
-	echo "<table border='1'><tr><td>ID</td><td>Nombre</td><td>Correo</td>";
-
-	while ($fila=mysqli_fetch_assoc($resultado)) {
-		echo "<tr>";
-		echo "<td>".$fila['idCliente']."</td>";
-		echo "<td>".$fila['nombre']."</td>";
-		echo "<td>".$fila['correoC']."</td>";
-		echo "</tr>";
-	}
-	echo "</table>";
+if(!empty($datos)){
+    echo json_encode($datos);
+}else{
+    echo json_encode([]);
+}
 ?>
