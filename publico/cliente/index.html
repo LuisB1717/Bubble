@@ -1,45 +1,68 @@
-<html lang="en">
-    <head>
-      <meta charset="UTF-8">
-      <link rel="stylesheet" href="cliente.css">
-      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-      <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
-      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-      <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    </head>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- DATATABLES -->
+    <!--  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> -->
+    <!-- BOOTSTRAP -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="cliente.css">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <style>
+        th{
+            padding: 0.4rem !important;
+            text-align: center;
+        }
+        td{
+            padding: 0.4rem !important;
+         
+        }
+        body>div {
+           
+            border: 2px solid black;
+            border-radius: 10px;
+        }
     
-    <body>
+    </style>
+   </head>
+<body>
       <div id="menu">
       </div>
       <section class="home-section">
-        <div class="container pt-5">
-          <div class="row">
-            <div class="col-md-12 text-center">
-              <h2>NEGOCIOS</h2>
-            </div>
-            <div class="col-md-12">
-              <table class="table">
+        <div class="container" style="margin-top: -10px; padding: 20px " >
+            <table id="tablax" class="table table-striped table-bordered" >
                 <thead>
-                  <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nombre</th>
-      
-                  </tr>
+                    <th>Nombre</th>
+                    <th>Correo</th>  
+                    <th>id_google</th>
                 </thead>
-                <tbody id='cuerpo'>
-                </tbody>
-              </table>
-            </div>
-          </div>
+                <tbody></tbody>
+            </table>
         </div>
       </section>
+   
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
+    </script>
+    <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
+    </script>
     
-      <script src="menu.js"> </script>
-      <script src="cargar_cliente.js"></script>  
-    </body>
-    
-    </html>
+    <script src="listar.js"></script>
+
+    <script src="menu.js"> </script>
+</body>
+</html>

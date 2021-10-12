@@ -3,6 +3,7 @@
 <head>
 	<link rel="stylesheet" href="../css/harrystyles.css">
 	<title>Cliente: Iniciar sesion</title>
+   <meta charset="utf-8">
 </head>
 <body>
     <div class="container">
@@ -12,8 +13,7 @@
               <h2 class="title">Iniciar sesión</h2>
               <p class="social-text">con</p>
               <div class="social-media">
-               
-                <button class="btn solid fa-google" id="iniciar-sesion"> Google </button>                         
+                <button class="btn solid fa-google" id="iniciar-sesion-c"> Google </button>                         
               </div>    
             </form>
             
@@ -25,5 +25,11 @@
           </div>
         </div>
       </div>
+
 </body>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+<script type="module" src="../dependencias/firebase.js"></script>
+<script  type="module" src="../auth/index.js"></script>
+
 </html>

@@ -1,7 +1,7 @@
 <?php
 include("../../dependencias/db/conexión.php");
 
-$sql ="SELECT nombre, correoC FROM cliente";
+$sql ="SELECT * FROM cliente";
 $resultado=mysqli_query($conexion,$sql);
 $datos = mysqli_fetch_all($resultado,MYSQLI_ASSOC);
 

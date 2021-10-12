@@ -8,8 +8,8 @@ const TIPOS = {
   NEGOCIO: 'negocio'
 }
 
-async function iniciarSesion(){
-  console.log('Iniciando sesión para ',params.tipo);
+async function iniciarSesion_cliente(){
+  console.log('Iniciando sesión para',params.tipo);
   try {
     const autenticacionFirebase = await firebase.auth.iniciarSesionGoogle()
     console.log('Inicio sesión', autenticacionFirebase);
@@ -26,12 +26,37 @@ async function iniciarSesion(){
 			method: 'post',
 			body: formData
 		})
+		// console.log('Registro', resultado);
+	} catch (error) {
+		console.error('Ups', error);
+	}
+}
+async function iniciarSesion_negocio(){
+  console.log('Iniciando sesión para',params.tipo);
+  try {
+    const autenticacionFirebase = await firebase.auth.iniciarSesionGoogle()
+    console.log('Inicio sesión', autenticacionFirebase);
+    const perfil2 = autenticacionFirebase.user
+    const perfil = autenticacionFirebase.additionalUserInfo.profile
+    
+    const formData = new FormData()
+    formData.append('id_google',perfil2.uid)
+    formData.append('nombre',perfil.name)
+    formData.append('correo',perfil.email)
+    formData.append('img',perfil.picture)
+    
+		const resultado = await fetch(`${config.API_URL}/entidades/negocio/insertar.php`, {
+			method: 'post',
+			body: formData
+		})
 		console.log('Registro', resultado);
 	} catch (error) {
 		console.error('Ups', error);
 	}
 }
 
-const botonIniciarSesion = document.getElementById('iniciar-sesion')
+const botonIniciarSesion = document.getElementById('iniciar-sesion-c')
+
 console.log(botonIniciarSesion);
-botonIniciarSesion.addEventListener('click',iniciarSesion)
+botonIniciarSesion.addEventListener('click',iniciarSesion_cliente)
+
