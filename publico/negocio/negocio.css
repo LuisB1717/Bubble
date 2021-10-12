@@ -93,9 +93,26 @@ main{
   border-radius: 50%;
   cursor: pointer;
 }
-#btn-abrir-popup-trabajador{
-  margin-left: auto;
+.btn-add-trabajador{
+  float:right;
 }
+.btn-add-trab{
+  float: right;
+  background-color: #EDEDED;
+  border-radius: 6px;
+  padding: 3px;
+}
+.btn-add-trab:hover{
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+#guardar-empleado{
+  background-color: #eded;
+    border-radius: 6px;
+ 
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
 .sidebar .nav-links{
   height: 100%;
   padding: 30px 0 150px 0;

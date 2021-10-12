@@ -76,7 +76,7 @@
 	text-align: center;
 	width: 420px;
 	
-	transition: .2s ease all;
+	transition: .1s ease all;
 	transform: scale(0.7);
 	opacity: 0;
 }
@@ -147,7 +147,7 @@
 .popup.active {	transform: scale(1); opacity: 1; }
 .popup.active h3 { animation: entradaTitulo .3s ease .4s forwards; }
 .popup.active h4 { animation: entradaSubtitulo .3s ease 4s forwards; }
-.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+.popup.active .contenedor-inputs { animation: entradaInputs 1s linear 0s forwards; }
 
 @keyframes entradaTitulo {
 	from {

@@ -20,11 +20,13 @@
   <div id="menu">
   </div>
   <section class="home-section">
-    <button id="btn-abrir-popup-trabajador"> agregrar Trbajador</button>
     <div class="container pt-5">
       <div class="row">
         <div class="col-md-12 text-center">
-          <h1>Contactos</h1>
+          <h1>Trabajadores</h1>
+        </div>
+        <div class="btn-add-trabajador">
+          <button class="btn-add-trab" id="btn-abrir-popup-trabajador"> Agregrar Trabajador</button>
         </div>
         <div class="col-md-12">
           <table class="table">
@@ -46,14 +48,15 @@
       <div class="popup" id="popup">
         <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
         <img class="logo" src="../img/burbuja_oscura.png" width="50" height="50">
-        <form id="registar-empleado-form">
+        <form  action="lista_empleado.html" id="registar-empleado-form">
           <div class="contenedor-inputs">
-            <input id="nombre-empleado" type="text" placeholder="Nombres y Apellidos" name="nombre">
+            <input id="nombre-empleado" type="text" placeholder="Usuario" name="nombre" required>
   
-            <input id="contrasena-empleado" type="password" placeholder="Contraseña" name="contrasena">
+            <input id="contrasena-empleado" type="password" placeholder="Contraseña" name="contrasena" required>
           </div>
+          <button type="submit" id="guardar-empleado">Guardar</button>
         </form>
-        <button id="guardar-empleado">Guardar</button>
+        
       </div>
     </div>
     
