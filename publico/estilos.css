@@ -37,8 +37,8 @@ body {
 }
 
 .img{
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 240px;
     display: block;
      width: 100%;
     object-fit: contain;
@@ -55,6 +55,7 @@ body {
 	margin: 20px;
     text-align: center;
     justify-content: center;
+	text-shadow: -2px 2px 0 #858383;
 }
 span {
 	font-size: 12px;
@@ -162,7 +163,7 @@ form {
 }
 
 #redes{
-	margin-left: 38%;
+	margin-left: 47%;
 	padding-top: 40px;
 }
 
