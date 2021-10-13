@@ -56,7 +56,6 @@ async function iniciarSesion_negocio(){
 }
 
 const botonIniciarSesion = document.getElementById('iniciar-sesion-c')
-
 console.log(botonIniciarSesion);
 botonIniciarSesion.addEventListener('click',iniciarSesion_cliente)
 

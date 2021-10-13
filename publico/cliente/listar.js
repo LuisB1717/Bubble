@@ -1,7 +1,7 @@
 $(document).ready(async function () {
 
   async function obtenerClientes(){
-    const data = await fetch('../../api/entidades/cliente/listar.php', {
+    const data = await fetch('../../api/entidades/Negocio/listar.php', {
        method: 'POST',
     });
     const jsondata = await data.json();
@@ -12,7 +12,7 @@ $(document).ready(async function () {
  
     var table = $("#tablax").DataTable({
        data: data,
-       columns: [{data: 'nombre'}, {data: 'correoC'},{data:'id_google_c'}],
+       columns: [{data: 'nombre'}, {data: 'correo'},{data:'id_google_n'},{data:'img'}],
        language: {
            processing: "Tratamiento en curso...",
            search: "Buscar&nbsp;:",
