@@ -2,7 +2,7 @@
 function cargarMenu(){
     
     $.ajax({
-        url:'../cliente/menu.html',
+        url:'../menu.html',
         beforesed:function(){
             $('#menu').html("Cargando...");
         },
