@@ -2,7 +2,7 @@
 function cargarMenu(){
     
     $.ajax({
-        url:'menu.html',
+        url:'../vistas/menu.html',
         beforesed:function(){
             $('#menu').html("Cargando...");
         },

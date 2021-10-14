@@ -1,13 +1,13 @@
 $(document).ready(async function () {
 
   async function obtenerClientes(){
-    const data = await fetch('../../api/entidades/Negocio/listar.php', {
+    const data = await fetch('../../../api/entidades/Negocio/listar.php', {
        method: 'POST',
     });
     const jsondata = await data.json();
     return jsondata;
   }
- 
+
   const data = await obtenerClientes()
  
     var table = $("#tablax").DataTable({
