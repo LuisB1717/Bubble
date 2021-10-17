@@ -1,4 +1,5 @@
 import config from '../config.js'
+import login from './login.js'
 
 var btnAbrirPopup = document.getElementById('btn-abrir-popup-trabajador'),
 	overlay = document.getElementById('overlay'),
@@ -22,6 +23,8 @@ async function registrarEmpleado() {
 	try {
 		const formulario = document.getElementById('registar-empleado-form')
 		const formData = new FormData(formulario)
+		const sesion = login.obtenerSesionNegocio()
+		formData.append("idNegocio",sesion.negocio.idNegocio)
 		const resultado = await fetch(`${config.API_URL}/entidades/empleado/insertarempleado.php`, {
 			method: 'post',
 			body: formData

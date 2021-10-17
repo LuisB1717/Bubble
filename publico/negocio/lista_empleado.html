@@ -54,16 +54,34 @@
   
             <input id="contrasena-empleado" type="password" placeholder="Contraseña" name="contrasena" required>
           </div>
-          <button type="submit" id="guardar-empleado">Guardar</button>
         </form>
-        
+        <button id="guardar-empleado">Guardar</button>
+
       </div>
     </div>
-    
+    <div class="overlay" id="overlay-editar">
+      <div class="popup" id="popup-editar">
+        <a href="#" id="btn-cerrar-editar" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <img class="logo" src="../img/burbuja_oscura.png" width="50" height="50">
+        <form id="editar-empleado-form">
+          <div class="contenedor-inputs">
+            <input id="nombre-empleado-editar" type="text" placeholder="Usuario" name="nombre" required>
+  
+            <input id="contrasena-empleado-editar" type="password" placeholder="Contraseña" name="contrasena" required>
+          </div>
+        </form>
+        <button id="editar-empleado">Editar</button>
+
+      </div>
+    </div>
   </section>
 
+
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
   <script src="menu.js"> </script>
   <script src="script_mostrar_empleado.js"></script>
+  <script type="module" src="editar_empleado.js"></script>
   <script type="module" src="popuptrabajador.js"></script>
 
 </body>
