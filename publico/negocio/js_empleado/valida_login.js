@@ -17,7 +17,7 @@ window.addEventListener('load', () => {
                 body: datos
             }).then(Response => Response.json())
             .then(({ success }) => {
-                if (success === 0) {
+                if (success === 1) {
                     location.href = "../negocio/lista_empleado.html";
                    
                 } else {

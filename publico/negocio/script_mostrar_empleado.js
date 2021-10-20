@@ -1,4 +1,5 @@
 
+import login from './login.js'
 let idAEditar = ""
 let id_negocio= ""
 const overlayEditar = document.getElementById('overlay-editar')
@@ -11,11 +12,12 @@ function mostrarEditarEmpleado(idEmpleado) {
 
 }
 
-async function cargarEmpleado(idNegocio) {
-   id_negocio= idNegocio
+async function cargarEmpleado() {
+  const session=login.obtenerSesionNegocio()
+  var idNegocio=session.negocio.idNegocio
   const tabla = document.querySelector('#cuerpo')
 
-  const respuesta = await fetch('../../api/entidades/empleado/listar.php', {
+  const respuesta = await fetch('../../api/entidades/empleado/listar.php?idNegocio='+idNegocio, {
     method: 'POST'
   })
   const trabajadores = await respuesta.json()

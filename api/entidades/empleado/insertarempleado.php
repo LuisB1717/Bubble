@@ -6,7 +6,7 @@
 	$idNegocio=$_POST['idNegocio'];
 	$nombre_usuario=$_POST['nombre_usuario'];
 
-	$solicitud="INSERT INTO empleado(nombre,contrasena,idNegocio,nombre_usuario)VALUES('$nombre','$contrasena','$idNegocio','$nombre_usuario')";
+	$solicitud="INSERT INTO empleado(nombre,contrasena,idNegocio,nombre_usuario)VALUES('$nombre','$password','$idNegocio','$nombre_usuario')";
 
 	$resultado=mysqli_query($conexion,$solicitud);;
 
