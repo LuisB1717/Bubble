@@ -24,6 +24,7 @@ async function cargarEmpleado() {
               <tr>
               <td>${trabajador.idEmpleado}</td>
                 <td>${trabajador.nombre}</td> 
+                <td>${trabajador.nombre_usuario}</td> 
               <td><button onclick="mostrarEditarEmpleado(${trabajador.idEmpleado})">Editar</button></td>
               <td><a href='../../api/entidades/empleado/eliminar.php?idEmpleado="${trabajador.idEmpleado}"'>Eliminar</a></td>
               </tr> `
