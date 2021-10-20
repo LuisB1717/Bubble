@@ -1,5 +1,6 @@
 
 let idAEditar = ""
+let id_negocio= ""
 const overlayEditar = document.getElementById('overlay-editar')
 const popupEditar = document.getElementById('popup-editar')
 
@@ -10,8 +11,8 @@ function mostrarEditarEmpleado(idEmpleado) {
 
 }
 
-async function cargarEmpleado() {
-
+async function cargarEmpleado(idNegocio) {
+   id_negocio= idNegocio
   const tabla = document.querySelector('#cuerpo')
 
   const respuesta = await fetch('../../api/entidades/empleado/listar.php', {
