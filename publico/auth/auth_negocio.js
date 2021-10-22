@@ -33,9 +33,6 @@ async function iniciarSesionNegocioGoogle(){
 		console.error('Ups', error);
 	}
 }
-
-
-
 const botonIniciarSesion = document.getElementById('iniciar-sesion-n')
 console.log(botonIniciarSesion);
 botonIniciarSesion.addEventListener('click',iniciarSesionNegocioGoogle)
