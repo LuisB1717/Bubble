@@ -1,6 +1,5 @@
 function guardarSesionCliente(sesion){
     localStorage.setItem("cliente",JSON.stringify(sesion))
-     console.log(sesion)
   }
 
   function obtenerSesionCliente() {

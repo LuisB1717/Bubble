@@ -3,7 +3,6 @@ import login from "../js/login.js"
 async function cargarPerfil() {
     const sesion = login.obtenerSesionCliente()
     var id = sesion.cliente.cliente.idCliente
-    console.log('hosla',id)
     const tabla = document.querySelector('#perfil_cliente')
     const respuesta = await fetch('../../../api/entidades/cliente/listar.php?idCliente='+id, {
         method: 'POST'
@@ -11,7 +10,6 @@ async function cargarPerfil() {
     const clientes = await respuesta.json()
  
     clientes.forEach(cliente => {
-
     tabla.innerHTML += `
       <div class="profile-content">
          <img src="${cliente.imgC}" alt="profileImg">
