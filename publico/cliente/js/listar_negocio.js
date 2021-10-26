@@ -4,6 +4,7 @@ async function cargarNegocio() {
   
     const respuesta = await fetch('../../../api/entidades/negocio/listar.php', {
       method: 'POST'
+
     })
     const negocios= await respuesta.json()
     negocios.forEach(negocio=> {
