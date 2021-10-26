@@ -12,13 +12,13 @@ window.addEventListener('load', () => {
         let datos = new FormData();
         datos.append("nombre_usuario", usuario.value);
         datos.append("contrasena", password.value);
-        fetch('../../api/entidades/empleado/valida_login.php', {
+        fetch('../../../api/entidades/empleado/valida_login.php', {
                 method: 'POST',
                 body: datos
             }).then(Response => Response.json())
             .then(({ success }) => {
                 if (success === 1) {
-                    location.href = "../negocio/lista_empleado.html";
+                    location.href = "../trabajador/vistas/lista_empleado.html";
                    
                 } else {
                     alerta(); 

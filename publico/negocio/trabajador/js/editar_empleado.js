@@ -1,4 +1,4 @@
-import config from '../config.js'
+import config from '../../../config.js'
 
 async function editarEmpleado() {
   console.log(idAEditar)
@@ -12,8 +12,8 @@ async function editarEmpleado() {
 		})
     const json = await resultado.json()
     if(json.result){
-      alert("Todo good")
-    }else alert("aiooz error")
+      alert("Todo bien")
+    }else alert(" error")
 		console.log('Registro', json);
     cerrarPopUpEditar()
 	} catch (error) {

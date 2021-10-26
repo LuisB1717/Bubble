@@ -1,5 +1,5 @@
 
-import login from './login.js'
+import login from '../../js/login.js'
 let idAEditar = ""
 let id_negocio= ""
 const overlayEditar = document.getElementById('overlay-editar')
@@ -17,7 +17,7 @@ async function cargarEmpleado() {
   var idNegocio=session.negocio.idNegocio
   const tabla = document.querySelector('#cuerpo')
 
-  const respuesta = await fetch('../../api/entidades/empleado/listar.php?idNegocio='+idNegocio, {
+  const respuesta = await fetch('../../../../api/entidades/empleado/listar.php?idNegocio='+idNegocio, {
     method: 'POST'
   })
   const trabajadores = await respuesta.json()
@@ -29,7 +29,7 @@ async function cargarEmpleado() {
                 <td>${trabajador.nombre}</td> 
                 <td>${trabajador.nombre_usuario}</td> 
               <td><button onclick="mostrarEditarEmpleado(${trabajador.idEmpleado})">Editar</button></td>
-              <td><a href='../../api/entidades/empleado/eliminar.php?idEmpleado="${trabajador.idEmpleado}"'>Eliminar</a></td>
+              <td><a  href='../../../../api/entidades/empleado/eliminar.php?idEmpleado="${trabajador.idEmpleado}"'>Eliminar</a></td>
               </tr> `
   });
 

@@ -1,5 +1,5 @@
-import config from '../config.js'
-import login from './login.js'
+import config from '../../../config.js'
+import login from '../../js/login.js'
 
 var btnAbrirPopup = document.getElementById('btn-abrir-popup-trabajador'),
 	overlay = document.getElementById('overlay'),
