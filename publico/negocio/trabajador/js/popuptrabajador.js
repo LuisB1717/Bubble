@@ -20,6 +20,7 @@ btnCerrarPopup.addEventListener('click', function (e) {
 console.log('config', config);
 
 async function registrarEmpleado() {
+
 	try {
 		const formulario = document.getElementById('registar-empleado-form')
 		const formData = new FormData(formulario)
@@ -30,9 +31,20 @@ async function registrarEmpleado() {
 			body: formData
 		})
 		console.log('Registro', resultado);
+		alert("REGISTRADO CON EXITO")
+		cerrarPopUp()
+		location.reload()
 	} catch (error) {
 		console.error('Ups', error);
+		
 	}
+	
 }
 const registrarEmpleadoBoton = document.getElementById('guardar-empleado')
 registrarEmpleadoBoton.addEventListener('click',registrarEmpleado)
+
+function cerrarPopUp (e) {
+	if(e) e.preventDefault();
+	overlay.classList.remove('active');
+	popup.classList.remove('active');
+}

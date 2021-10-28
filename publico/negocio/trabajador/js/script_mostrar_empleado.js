@@ -5,12 +5,13 @@ let id_negocio= ""
 const overlayEditar = document.getElementById('overlay-editar')
 const popupEditar = document.getElementById('popup-editar')
 
-function mostrarEditarEmpleado(idEmpleado) {
-  idAEditar=idEmpleado
+ function mostrarEditarEmpleado(idEmpleado) {
+  idAEditar=idEmpleado;
   overlayEditar.classList.add('active');
 	popupEditar.classList.add('active');
 
 }
+
 
 async function cargarEmpleado() {
   const session=login.obtenerSesionNegocio()

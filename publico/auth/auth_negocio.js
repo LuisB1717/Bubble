@@ -1,6 +1,6 @@
 import firebase from "../dependencias/firebase.js";
 import config from '../config.js'
-import login from "../negocio/login.js"
+import login from "../negocio/js/login.js"
 const urlSearchParams = new URLSearchParams(window.location.search);
 const params = Object.fromEntries(urlSearchParams.entries());
 const TIPOS = {
@@ -28,7 +28,7 @@ async function iniciarSesionNegocioGoogle(){
 		})
     const json = await resultado.json()
     login.guardarSesionNegocio(json)
-    location.href = location.href.replace("login","index")
+    location.href = location.href.replace("login","../trabajador/vistas/lista_empleado")
   	} catch (error) {
 		console.error('Ups', error);
 	}
