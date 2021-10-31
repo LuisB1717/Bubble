@@ -14,13 +14,15 @@
     die();
 	}
 	else{
-	$solicitud="INSERT INTO cliente(id_google_c,nombre,corsreoC,imgC)VALUES('$id_google','$nombre','$correo','$img')";
+	$solicitud="INSERT INTO cliente(id_google_c,nombre,correoC,imgC)VALUES('$id_google','$nombre','$correo','$img')";
 	$resultado=mysqli_query($conexion,$solicitud);
+	if ($resultado){
 	$sql ="SELECT * FROM cliente where id_google_c= '$id_google'";
 	$validacion=mysqli_query($conexion,$sql);
 	$datoscliente = mysqli_fetch_all($validacion,MYSQLI_ASSOC);
-	echo json_encode(array("cliente"=>$datos[0]));
-	}
-
-	
+	echo json_encode(array("cliente"=>$datoscliente[0]));
+	 }
+	 else 
+	 echo json_encode('No se pudo registrar');
+	}	
 ?>
