@@ -76,7 +76,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="chate-body">
+                <div class="chate-body" id="msg-list">
+                    <!--
                     <div class="message-sender">
                         <div class="message-sender-avatar">
                             <img src="../images/hibrido.png" width="50px" alt="" class="redondas">
@@ -126,14 +127,17 @@
                         </div>
                         <div class="message-sender-icon"><i class=></i></div>
 
-                    </div>
+                    </div>-->
                     <div class="message-box">
+                        <form id="send-msg-form" >
                         <div class="message-box-aria">
-                            <input type="text" placeholder="Escribe un mensaje aquí">
+                            <input type="text" id="msgenviar" placeholder="Escribe un mensaje aquí">
                             <i class='far fa-smile'></i>
+                            
                         </div>
+                        <button type="button" id="btnenviarmsg"   >ENVIAR</button>
+                        </form>
                     </div>
-
 
                 </div>
             </div>
