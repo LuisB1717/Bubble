@@ -269,7 +269,7 @@ main{
   color: #fff;
   font-size: 18px;
   font-weight: 500;
-  white-space: nowrap;
+  white-space: normal;
 }
 .sidebar.close .profile-details i,
 .sidebar.close .profile-details .profile_name,

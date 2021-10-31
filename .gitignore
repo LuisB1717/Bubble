@@ -1,1 +1,7 @@
+<<<<<<< HEAD
 publico/config.js
+=======
+publico/config.json
+*/node_modules/
+*/package-lock.json
+>>>>>>> b5ae10b8168a2fe93974e10ad14f4c8103bb8287
