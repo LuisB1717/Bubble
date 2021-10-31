@@ -1,3 +1,7 @@
+import config from "../../config.js";
+
+var socket = io.connect(config.SOCKET_URL, { forceNew: true });
+
 
 function cargarMenu(){
     
@@ -12,3 +16,5 @@ function cargarMenu(){
     })
 }
 cargarMenu()
+
+
