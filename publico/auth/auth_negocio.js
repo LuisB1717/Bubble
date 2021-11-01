@@ -28,7 +28,7 @@ async function iniciarSesionNegocioGoogle(){
 		})
     const json = await resultado.json()
     login.guardarSesionNegocio(json)
-    location.href = location.href.replace("login","../trabajador/vistas/lista_empleado")
+    location.href = location.href.replace("login","../productos/vistas/lista_productos")
   	} catch (error) {
 		console.error('Ups', error);
 	}
