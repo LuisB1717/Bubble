@@ -1,5 +1,4 @@
 var delayTimer;
-
 async function buscarNegocio() {
     clearTimeout(delayTimer);
     delayTimer = setTimeout(async function() {
@@ -8,7 +7,6 @@ async function buscarNegocio() {
         const text = buscar.value;
         const tabla = document.querySelector('#cargar-negocio')
         tabla.innerHTML = ``;
-
         if (text == "") {
             const respuesta2 = await fetch('../../../api/entidades/negocio/listar.php', {
                 method: 'POST'
@@ -48,8 +46,8 @@ async function buscarNegocio() {
             });
         }
 
-        // Do the ajax stuff
-    }, 300); // Will do the ajax stuff after 1000 ms, or 1 s
+
+    }, 500);
 }
 
 buscarNegocio()
