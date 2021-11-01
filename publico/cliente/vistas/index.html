@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="../css/index.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
 <body>
@@ -18,8 +19,17 @@
     </div>
     <section class="home-section">
 
+        <div class="wrap">
+            <div class="search">
+                <input onkeyup=buscarNegocio() type="text" id="buscar" name="buscar" class="searchTerm" placeholder="¿Qué negocio estás buscando?">
+                <button onclick=buscarNegocio() type="submit" class="searchButton">
+                 <i class="fa fa-search"></i>
+              </button>
+            </div>
+        </div>
+
         <div class="title-cards">
-            <h2>Conectate con negocios</h2>
+            <!-- <h2>Conéctate con negocios</h2> -->
         </div>
         <div class="container-card" id="cargar-negocio">
 
@@ -27,10 +37,32 @@
 
     </section>
 
-    <script src="../js/menu.js"> </script>
+    <script src="../js/menu.js"></script>
     <script type="module" src="../js/perfil.js"></script>
     <script src="../js/listar_negocio.js"></script>
-    
+    <script src="../js/buscar_negocio.js">
+    </script>
+
+    <!-- 
+    <script type="text/javascript">
+        function buscar_negocio(buscar) {
+
+            var parametros = {
+                "buscar": buscar
+            };
+            $.ajax({
+                data: parametros,
+                type: 'POST',
+                URL: "../../../api/entidades/negocio/buscar_xnombre.php",
+                sucess: function(data) {
+                    document.getElementById("cargar-negocio").innerHTML = data;
+                }
+            });
+
+        }
+    </script> -->
+
+
 </body>
 
 </html>

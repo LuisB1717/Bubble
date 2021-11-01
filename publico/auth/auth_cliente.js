@@ -27,8 +27,9 @@ async function iniciarSesion_cliente(){
 		const resultado = await fetch(`${config.API_URL}/entidades/cliente/insertar.php`, {
 			method: 'post',
 			body: formData
+      
 		})
-    
+ 
     const json = await resultado.json()
     login.guardarSesionCliente(json)
     location.href = location.href.replace("login","index")
