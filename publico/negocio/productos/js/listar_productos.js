@@ -24,7 +24,7 @@ async function cargarProducto() {
 
     tabla.innerHTML += `
         <div class="card">
-        <img src="../css/shoes-nike.png" alt="">
+        <img src="${producto.foto}" alt="">
           <div class="product-name-price">
             <h2 class="product-name">${producto.nombreP}</h2>
             <h2 class="product-price">${producto.descripcion}<span>$</span></h2>
