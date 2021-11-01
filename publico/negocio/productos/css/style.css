@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap%27');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.container-card{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-template-rows: auto;
+
+}
+.title-cards{
+	width: 100%;
+	max-width: 1080px;
+	margin: auto;
+	padding: 20px;
+	margin-top: 20px;
+	text-align: center;
+	color: #000000;
+}
+
+.hachedos{
+	font-weight: bold;
+}
+.card{
+	width: 300px;
+	height: 350px;
+	margin: 20px;
+	border-radius: 6px;
+	overflow: hidden;
+	position: relative;
+	z-index: 0;
+	text-align: center;
+}
+
+.card:before{
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: -50%;
+	left: 0;
+	background: #111;
+	z-index: -1;
+	position: absolute;
+	transform: skewY(-15deg);
+	transition: .3s all ease;
+}
+
+.card:hover:before{
+	top: -60%;
+	transform: skewY(15deg);
+}
+
+.card img{
+	width: 80%;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%,0);
+	padding-top: 10px;
+	transition: .3s all ease;
+}
+
+.card:hover img{
+	width: 60%;
+	transform: translate(-50%,0) rotate(15deg);
+}
+
+.card .product-name-price{
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	transition: .3s all ease;
+}
+
+.card:hover .product-name-price{
+	bottom: 15%;
+	
+}
+
+.card .product-name-price .product-name{
+	color: rgb(0, 0, 0);
+	font-weight: 600;
+	font-size: 20px;
+}
+
+.card .product-name-price .product-price{
+	color: rgb(0, 0, 0);
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.card .product-name-price .product-price span{
+	color: #A271F2;
+	font-size: 15px;
+	padding-left: 3px;
+}
+
+.card .buy-now{
+	display: inline-block;
+	padding: 10px 25px;
+	border-radius: 50px;
+	background: #A271F2;
+	color: #fff;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 500;
+	position: absolute;
+	bottom: -50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	outline: none;
+	transition: .3s all ease;
+}
+
+.card .buy-now:hover{
+	background: #fff;
+	color: #A271F2;
+}
+
+.card:hover .buy-now{
+	bottom: 5%;
+}

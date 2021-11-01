@@ -1,0 +1,97 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../../css/negocio.css">
+  <link rel="stylesheet" href="../../productos/css/index.css">
+  <link rel="stylesheet" href="../../productos/css/style.css">
+  <link rel="stylesheet" href="../../productos/css/add.css">
+  <link rel="stylesheet" href="../../trabajador/css/popup.css">
+
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+  <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600|Open+Sans" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+  <script src="https://kit.fontawesome.com/41bcea2ae3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div id="menu">
+  </div>
+
+  <section class="home-section">
+
+  <div class="fab-container">
+		<div class="fab fab-icon-holder">
+			<i class="fas fa-cog"></i>
+		</div>
+		<ul class="fab-options">
+			<li>
+				<span class="fab-label">Agregar</span>
+				<div id="btn-abrir-popup-trabajador"  class="fab-icon-holder">
+          <i class="fas fa-plus"></i>
+				</div>
+			</li>
+			<li>
+				<span class="fab-label">Editar</span>
+				<div id=""class="fab-icon-holder">
+          <i class="fas fa-edit"></i>
+				</div>
+			</li>
+		</ul>
+	</div>
+    <div class="title-cards">
+        <h2 class="hachedos">Productos</h2>
+    </div>
+    <div class="container-card" id="cargar-negocio">
+    </div>
+
+     <div class="overlay" id="overlay">
+      <div class="popup" id="popup">
+        <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <img class="logo" src="../../../img/burbuja_oscura.png" width="50" height="50">
+        <form  action="lista_productos.html" id="registar-empleado-form">
+          <div class="contenedor-inputs">
+            <input id="nombre-empleado" type="text" placeholder="Nombre" name="nombreP" required>
+            <input id="usuario-empleado" type="text" placeholder="Descripcion" name="descripcion" required>
+            <input id="contrasena-empleado" type="file" placeholder="Foto" name="foto" required>
+          </div>
+        </form>
+        <button id="guardar-empleado">Guardar</button>
+
+      </div>
+    </div>
+    <div class="overlay" id="overlay-editar">
+      <div class="popup" id="popup-editar">
+        <a href="#" id="btn-cerrar-editar" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
+        <img class="logo" src="../../../img/burbuja_oscura.png" width="50" height="50">
+        <form id="editar-empleado-form">
+          <div class="contenedor-inputs">
+            <input id="nombre-empleado" type="text" placeholder="Nombre" name="nombreP" required>
+            <input id="usuario-empleado" type="text" placeholder="Descripcion" name="descripcion" required>
+            <input id="contrasena-empleado" type="file" placeholder="Foto" name="foto" required>
+          </div>
+        </form>
+        <button id="editar-producto">Editar</button>
+
+      </div>
+    </div>
+  </section>
+
+ 
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
+
+  <script src="../../js/menu.js"> </script>
+  <script type="module" src="../../js/perfil.js"></script>
+  <script type="module" src="../js/agregar.js"></script>
+  <script type="module" src="../js/listar_productos.js"></script>
+  <script type="module" src="../js/editar_producto.js"></script>
+
+</body>
+
+</html>

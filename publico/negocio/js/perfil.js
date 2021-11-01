@@ -5,7 +5,7 @@ async function cargarPerfil() {
     var idNegocio = sesion.negocio.idNegocio
   
     const tabla = document.querySelector('#perfil-negocio')
-    const respuesta_negocio = await fetch('../../../../api/entidades/Negocio/listar.php?idNegocio='+idNegocio, {
+    const respuesta_negocio = await fetch('../../../../api/entidades/Negocio/perfil.php?idNegocio='+idNegocio, {
         method: 'POST'
     })
    
@@ -14,8 +14,6 @@ async function cargarPerfil() {
     
     negocio.forEach(
         negocio => {
-        
-   
             tabla.innerHTML += `
             <div class="profile-content">
                 <img src="${negocio.img}" alt="profileImg">
