@@ -18,17 +18,3 @@ function enviarMensaje(mensaje, negocioId) {
 btn.onclick = function() {
     enviarMensaje($('#msgenviar').val(), 5)
 };
-
-function cargarMenu() {
-
-    $.ajax({
-        url: '../vistas/menu.html',
-        beforesed: function() {
-            $('#menu').html("Cargando...");
-        },
-        success: function(msg_mostar) {
-            $('#menu').html(msg_mostar);
-        }
-    })
-}
-cargarMenu()

@@ -18,7 +18,6 @@
     <div id="menu">
     </div>
     <section class="home-section">
-
         <div class="wrap">
             <div class="search">
                 <input onkeyup=buscarNegocio() type="text" id="buscar" name="buscar" class="searchTerm" placeholder="¿Qué negocio estás buscando?">
@@ -27,7 +26,6 @@
               </button>
             </div>
         </div>
-
         <div class="title-cards">
             <!-- <h2>Conéctate con negocios</h2> -->
         </div>
@@ -36,12 +34,14 @@
         </div>
 
     </section>
-
-    <script src="../js/menu.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
     <script type="module" src="../js/perfil.js"></script>
+    <script src="../js/menu.js"></script>
     <script src="../js/listar_negocio.js"></script>
-    <script type="module" src="../js/buscar_negocio.js">
-    </script>
+    <script src="../js/buscar_negocio.js"></script>
+    <script type="module" src="../../auth/cerrar_sesion.js"></script>
+    <script type="module" src="../../dependencias/firebase.js"></script>
 
 </body>
 
