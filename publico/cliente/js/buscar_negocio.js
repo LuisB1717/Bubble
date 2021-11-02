@@ -1,6 +1,7 @@
 import config from '../../config.js'
 import login from './login.js'
 var delayTimer;
+<<<<<<< HEAD
 
 async function registrarChat(idNegocio){
     
@@ -28,6 +29,8 @@ async function registrarChat(idNegocio){
 
 
 
+=======
+>>>>>>> 53c41313e47618bceaf55cd1d548986802c4e521
 async function buscarNegocio() {
     clearTimeout(delayTimer);
     delayTimer = setTimeout(async function() {
@@ -36,9 +39,12 @@ async function buscarNegocio() {
         const text = buscar.value;
         const tabla = document.querySelector('#cargar-negocio')
         tabla.innerHTML = ``;
+<<<<<<< HEAD
 
         
 	
+=======
+>>>>>>> 53c41313e47618bceaf55cd1d548986802c4e521
         if (text == "") {
             const respuesta2 = await fetch('../../../api/entidades/negocio/listar.php', {
                 method: 'POST',
@@ -81,8 +87,8 @@ async function buscarNegocio() {
             });
         }
 
-        // Do the ajax stuff
-    }, 300); // Will do the ajax stuff after 1000 ms, or 1 s
+
+    }, 500);
 }
 window.registrarChat = registrarChat
 window.buscarNegocio = buscarNegocio

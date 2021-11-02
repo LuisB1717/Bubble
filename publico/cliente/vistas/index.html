@@ -5,10 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- DATATABLES -->
-    <!--  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css"> -->
-    <!-- BOOTSTRAP -->
-    <meta charset="UTF-8">
     <link rel="stylesheet" href="../css/cliente.css">
     <link rel="stylesheet" href="../css/index.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
@@ -22,7 +18,6 @@
     <div id="menu">
     </div>
     <section class="home-section">
-
         <div class="wrap">
             <div class="search">
                 <input onkeyup=buscarNegocio() type="text" id="buscar" name="buscar" class="searchTerm" placeholder="¿Qué negocio estás buscando?">
@@ -31,7 +26,6 @@
               </button>
             </div>
         </div>
-
         <div class="title-cards">
             <!-- <h2>Conéctate con negocios</h2> -->
         </div>
@@ -40,9 +34,10 @@
         </div>
 
     </section>
-
-    <script src="../js/menu.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-auth.js"></script>
     <script type="module" src="../js/perfil.js"></script>
+<<<<<<< HEAD
     <script  src="../js/listar_negocio.js"></script>
     <script type="module" src="../js/buscar_negocio.js">
     </script>
@@ -66,6 +61,13 @@
         }
     </script> -->
 
+=======
+    <script src="../js/menu.js"></script>
+    <script src="../js/listar_negocio.js"></script>
+    <script src="../js/buscar_negocio.js"></script>
+    <script type="module" src="../../auth/cerrar_sesion.js"></script>
+    <script type="module" src="../../dependencias/firebase.js"></script>
+>>>>>>> 53c41313e47618bceaf55cd1d548986802c4e521
 
 </body>
 

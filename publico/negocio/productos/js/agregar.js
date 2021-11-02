@@ -7,24 +7,25 @@ var btnAbrirPopup = document.getElementById('btn-abrir-popup-trabajador'),
 	btnCerrarPopup = document.getElementById('btn-cerrar-popup');
 
 btnAbrirPopup.addEventListener('click', function () {
-	overlay.classList.add('active');
-	popup.classList.add('active');
-});
-
+    overlay.classList.add('active');
+    popup.classList.add('active');
+    });
+    
 btnCerrarPopup.addEventListener('click', function (e) {
-	e.preventDefault();
-	overlay.classList.remove('active');
-	popup.classList.remove('active');
-});
+     e.preventDefault();
+    overlay.classList.remove('active');
+    popup.classList.remove('active');
+    });
 
-async function registrarEmpleado() {
 
+async function registrarProducto() {
 	try {
 		const formulario = document.getElementById('registar-empleado-form')
 		const formData = new FormData(formulario)
 		const sesion = login.obtenerSesionNegocio()
 		formData.append("idNegocio",sesion.negocio.idNegocio)
-		const resultado = await fetch(`${config.API_URL}/entidades/empleado/insertarempleado.php`, {
+		
+		const resultado = await fetch(`${config.API_URL}/entidades/producto/insertar.php`, {
 			method: 'post',
 			body: formData
 		})
@@ -39,7 +40,7 @@ async function registrarEmpleado() {
 	
 }
 const registrarEmpleadoBoton = document.getElementById('guardar-empleado')
-registrarEmpleadoBoton.addEventListener('click',registrarEmpleado)
+registrarEmpleadoBoton.addEventListener('click',registrarProducto)
 
 function cerrarPopUp (e) {
 	if(e) e.preventDefault();
