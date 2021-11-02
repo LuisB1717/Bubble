@@ -37,20 +37,14 @@
 				</div>
 			</li>
 			<li>
-				<span class="fab-label">Editar</span>
-				<div id="" class="fab-icon-holder">
-          <i class="fas fa-edit"></i>
-				</div>
-			</li>
-		</ul>
-	</div>
-    <div class="title-cards">
-        <h2 class="hachedos">Productos</h2>
-    </div>
-    <div class="container-card" id="cargar-negocio">
-    </div>
+        <div class="buscar">
+          <input onkeyup=buscarProducto() type="text" id="buscar" placeholder="Buscar" required class="fab-label">
+          <div class="fab-icon-holder" onclick=buscarProducto() type="submit">
+            <i class="fas fa-search"></i>
+          </div>
 
-     <div class="overlay" id="overlay">
+
+      <div class="overlay" id="overlay">
       <div class="popup" id="popup">
         <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
         <img class="logo" src="../../../img/burbuja_oscura.png" width="50" height="50">
@@ -91,6 +85,7 @@
   <script type="module" src="../js/listar_productos.js"></script>
   <script type="module" src="../js/editar_producto.js"></script>
   <script type="module" src="../js/agregar.js"></script>
+  <script type="module" src="../js/buscar.js"></script>
 
 </body>
 
