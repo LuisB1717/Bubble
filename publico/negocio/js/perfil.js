@@ -22,7 +22,9 @@ async function cargarPerfil() {
                 <div class="profile_name"><span> ${negocio.nombre}</span> </div>
                 <div class="job"><span>Negocio</span></div>
             </div>
+            <a href="../../vistas/login.html" >
             <i class='bx bx-log-out'></i>   
+            </a>
             `
         }); 
 

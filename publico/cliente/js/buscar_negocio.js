@@ -23,12 +23,7 @@ async function registrarChat(idNegocio) {
 
     location.href = location.href.replace("index", "chats")
 
-
-<<<<<<< HEAD
-=======
 }
-
->>>>>>> 300e628eae3aa556c279a9b8fa771c95c23f68ae
 async function buscarNegocio() {
     clearTimeout(delayTimer);
     delayTimer = setTimeout(async function() {
@@ -38,12 +33,8 @@ async function buscarNegocio() {
         const tabla = document.querySelector('#cargar-negocio')
         tabla.innerHTML = ``;
 
-<<<<<<< HEAD
         
 	
-=======
-
->>>>>>> 300e628eae3aa556c279a9b8fa771c95c23f68ae
         if (text == "") {
             const respuesta2 = await fetch('../../../api/entidades/negocio/listar.php', {
                 method: 'POST',
