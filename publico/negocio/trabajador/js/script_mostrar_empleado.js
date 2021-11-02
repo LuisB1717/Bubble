@@ -68,8 +68,8 @@ async function cargarEmpleado() {
               <td>${trabajador.idEmpleado}</td>
                 <td>${trabajador.nombre}</td> 
                 <td>${trabajador.nombre_usuario}</td> 
-              <td><button type="button" class="btn btn-info" onclick='mostrarEditarEmpleado(${trabajador.idEmpleado})'>Editar</button></td>
-              <td><a type="button" class="btn btn-danger" href='../../../../api/entidades/empleado/eliminar.php?idEmpleado="${trabajador.idEmpleado}"'>Eliminar</a></td>
+              <td><button type="button"  class="btn btn-outline-dark" onclick='mostrarEditarEmpleado(${trabajador.idEmpleado})'>Editar</button></td>
+              <td><a type="button"  class="btn btn-outline-dark"href='../../../../api/entidades/empleado/eliminar.php?idEmpleado="${trabajador.idEmpleado}"'>Eliminar</a></td>
               </tr> `
   });
 

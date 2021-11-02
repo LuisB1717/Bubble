@@ -20,10 +20,10 @@ async function listarChat(){
         <div class="mesg-info ">
             <div class="ms-info">
                 <span class=" sender-name"> ${chat.nombre}</span>
-                <span class="time"> ayer<span class="msge-num"></span></span>
+                <span class="time"> <span class="msge-num"></span></span>
             </div>
             <div class="action">
-                <span>El fin de semana hacemos</span>
+                <span></span>
             </div>
         </div>
     </div>
