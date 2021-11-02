@@ -125,10 +125,23 @@ body{
 }
 
 .card .buy-now:hover{
-	background: #fff;
-	color: #A271F2;
+	background: #111;
+	color: #ffffff;
 }
 
 .card:hover .buy-now{
 	bottom: 5%;
+}
+
+.card .buy-delete{
+	display: inline-block;
+	padding: 5px 10px;
+	border-radius: 50px;
+	background: #A271F2;
+	color: #fff;
+	font-size: 10px;
+	position: absolute;
+	right: 0;
+	transition: .3s all ease;
+	text-decoration: none;
 }

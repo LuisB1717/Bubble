@@ -31,8 +31,8 @@ async function registrarProducto() {
 		})
 		console.log('Registro', resultado);
 		alert("REGISTRADO CON EXITO")
-		/*cerrarPopUp()
-		location.reload()*/
+		cerrarPopUp()
+		location.reload()
 	} catch (error) {
 		console.error('Ups', error);
 		
