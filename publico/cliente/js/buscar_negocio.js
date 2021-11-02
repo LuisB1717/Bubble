@@ -1,4 +1,32 @@
+import config from '../../config.js'
+import login from './login.js'
 var delayTimer;
+
+async function registrarChat(idNegocio){
+    
+        console.log(idNegocio)
+
+		const formData = new FormData()      
+        const sesionc = login.obtenerSesionCliente()
+       
+        formData.append("idCliente",sesionc.cliente.cliente.idCliente)
+        formData.append("idNegocio",idNegocio)
+		       
+
+        const respuestachat = await fetch(`${config.API_URL}/entidades/chat/insertar.php`, {
+            method: 'POST',
+            body: formData,
+            
+        } )
+        const json = await respuestachat.json()
+        alert(json.mensaje)
+
+        location.href = location.href.replace("index","chats")
+
+
+}
+
+
 
 async function buscarNegocio() {
     clearTimeout(delayTimer);
@@ -9,10 +37,14 @@ async function buscarNegocio() {
         const tabla = document.querySelector('#cargar-negocio')
         tabla.innerHTML = ``;
 
+        
+	
         if (text == "") {
             const respuesta2 = await fetch('../../../api/entidades/negocio/listar.php', {
-                method: 'POST'
+                method: 'POST',
+              
             })
+
             const negocios = await respuesta2.json()
             negocios.forEach(negocio => {
 
@@ -22,15 +54,16 @@ async function buscarNegocio() {
                        <div class="contenido-card">
                               <h3>${negocio.nombre}</h3>
                               <p>Descripción</p>
-                              <a href="#">Iniciar chat</a>
+                              <a onclick="registrarChat(${negocio.idNegocio})">Iniciar chat</a>
                        </div>
                     </div> `
             });
 
         } else {
-
+     
             const respuesta = await fetch('../../../api/entidades/negocio/buscar_xnombre.php?nombre=' + text, {
-                method: 'POST'
+                method: 'POST',
+               
             })
             const negocios = await respuesta.json()
             console.log('hola', negocios)
@@ -42,7 +75,7 @@ async function buscarNegocio() {
                        <div class="contenido-card">
                               <h3>${negocio.nombre}</h3>
                               <p>Descripción</p>
-                              <a href="#">Iniciar chat</a>
+                              <a onclick="registrarChat(${negocio.idNegocio})">Iniciar chat</a>
                        </div>
                     </div> `
             });
@@ -51,5 +84,6 @@ async function buscarNegocio() {
         // Do the ajax stuff
     }, 300); // Will do the ajax stuff after 1000 ms, or 1 s
 }
-
-buscarNegocio()
+window.registrarChat = registrarChat
+window.buscarNegocio = buscarNegocio
+buscarNegocio();

@@ -58,7 +58,7 @@ async function cargarEmpleado() {
   var idNegocio=session.negocio.idNegocio
   const tabla = document.querySelector('#cuerpo')
 
-  const respuesta = await fetch('../../../../api/entidades/empleado/listar.php?idNegocio='+idNegocio, {
+  const respuesta = await fetch(`${config.API_URL}/entidades/empleado/listar.php?idNegocio=`+idNegocio, {
     method: 'POST'
   })
   const trabajadores = await respuesta.json()
@@ -69,7 +69,7 @@ async function cargarEmpleado() {
                 <td>${trabajador.nombre}</td> 
                 <td>${trabajador.nombre_usuario}</td> 
               <td><button type="button" class="btn btn-info" onclick='mostrarEditarEmpleado(${trabajador.idEmpleado})'>Editar</button></td>
-              <td><button  type="button" class="btn btn-danger" href='../../../../api/entidades/empleado/eliminar.php?idEmpleado="${trabajador.idEmpleado}"'>Eliminar</button></td>
+              <td><a type="button" class="btn btn-danger" href='../../../../api/entidades/empleado/eliminar.php?idEmpleado="${trabajador.idEmpleado}"'>Eliminar</a></td>
               </tr> `
   });
 
