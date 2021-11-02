@@ -22,7 +22,7 @@ async function cargarPerfil() {
                 <div class="profile_name"><span> ${negocio.nombre}</span> </div>
                 <div class="job"><span>Negocio</span></div>
             </div>
-            <i class='bx bx-log-out'></i>    
+            <i class='bx bx-log-out'></i>   
             `
         }); 
 

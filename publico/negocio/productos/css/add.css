@@ -16,11 +16,10 @@ h1 {
 }
 
 .fab-icon-holder {
-	width: 50px;
-	height: 50px;
+	width: 45px;
+	height: 45px;
 	border-radius: 100%;
 	background: #111;
-
 	box-shadow: 0 6px 20px rgba(177, 35, 35, 0.2);
 }
 
@@ -32,7 +31,6 @@ h1 {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-
 	height: 100%;
 	font-size: 25px;
 	color: #ffffff;
@@ -72,12 +70,58 @@ h1 {
 	align-self: center;
 	user-select: none;
 	white-space: nowrap;
-	border-radius: 3px;
-	font-size: 16px;
+	border-radius: 10px;
+	font-size: 15px;
 	background: #111;
 	color: #ffffff;
 	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 	margin-right: 10px;
 }
 
+.buscar{
+	position: relative;
+    display: flex;
+}
+
+.buscar input{
+	width: 150px;
+	text-align: center;
+	user-select: none;
+	white-space: nowrap;
+	padding: 2px 5px;
+	font-size: 15px;
+	color: rgb(255, 255, 255);
+	border-radius: 40px;
+	transition: all 0.6 ease;
+	background: #111;
+	margin-right: 10px;
+	box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+	
+}
+
+.btn{
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #111;
+	width: 45px;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	color: #ffffff;
+	font-size: 15px;
+	border-radius: 100%;
+	cursor: pointer;
+	align-items: center;
+    justify-content: center;
+}
+
+.buscar:hover input{
+	width: 150px;
+}
+
+.buscar input:focus{
+	width: 150px;
+}
+	
 
